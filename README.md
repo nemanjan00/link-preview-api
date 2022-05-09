@@ -1,5 +1,7 @@
 # link-preview-api
 
+
+
 Link preview API based on ospfranco/link-preview-js 
 
 ## Table of contents
@@ -40,7 +42,7 @@ TOKEN=123 # Bearer token. Do not set if you do not want auth
 ### Docker
 
 ```bash
-docker run -ti -e PORT=3000 -e TOKEN=123 -p 3000:3000 nemanjan00/link-preview-api herokuish procfile run web
+docker run -ti -e PORT=3000 -e TOKEN=123 -p 3000:3000 nemanjan00/link-preview-api herokuish procfile start web
 ```
 
 ### Yarn
