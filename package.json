@@ -1,6 +1,6 @@
 {
   "name": "link-preview-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Link preview API based on ospfranco/link-preview-js",
   "main": "src/index.js",
   "repository": "git@github.com:nemanjan00/link-preview-api.git",
