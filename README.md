@@ -5,6 +5,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Usage](#usage)
+* [Setup](#setup)
 	* [Configuration](#configuration)
 	* [Docker](#docker)
 	* [Yarn](#yarn)
@@ -14,7 +15,16 @@
 
 ## Usage
 
-It can be used either as Docker container or node application.
+```bash
+curl -X POST 'http://localhost:3000/api/preview_link' \
+	-H "Authorization: Bearer 123" \
+	-H "content-type: application/json" \
+	--data '{"link":"https://google.com/"}'
+```
+
+## Setup
+
+It can be installed either as Docker container or node application.
 
 ### Configuration
 
