@@ -3,7 +3,7 @@ const router = require("express").Router();
 const errors = require("../errors");
 const config = require("../config");
 
-router.use((req, res, next) => {
+router.use((req, _res, next) => {
 	if(config.get("TOKEN") === undefined) {
 		return next();
 	}
@@ -27,7 +27,7 @@ router.use((_req, _res, next) => {
 
 router.use((err, _req, res, next) => {
 	if (res.headersSent) {
-		return next(err)
+		return next(err);
 	}
 
 

@@ -20,7 +20,7 @@ router.post("/", (req, res, next) => {
 		res.json({
 			status: "ok",
 			preview
-		})
+		});
 	}).catch(err => {
 		console.error(err);
 
