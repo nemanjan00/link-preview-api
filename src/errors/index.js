@@ -2,19 +2,32 @@ module.exports = {
 	tokenIsMissing: () => {
 		return {
 			status: 400,
-			error: {
-				type: "TokenNotFound",
-				message: "Authorization token is missing"
-			}
+			type: "TokenNotFound",
+			message: "Authorization token is missing"
 		};
 	},
+
 	tokenIncorrect: () => {
 		return {
 			status: 401,
-			error: {
-				type: "TokenIsInvalid",
-				message: "Token is not valid"
-			}
+			type: "TokenIsInvalid",
+			message: "Token is not valid"
+		};
+	},
+
+	unknownError: () => {
+		return {
+			status: 500,
+			type: "UnknownError",
+			message: "Unknown error"
+		};
+	},
+
+	notFound: () => {
+		return {
+			status: 404,
+			type: "NotFound",
+			message: "Not found"
 		};
 	}
 };
