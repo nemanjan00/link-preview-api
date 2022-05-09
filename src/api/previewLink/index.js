@@ -7,11 +7,10 @@ const errors = require("../../errors");
 const router = require("express").Router();
 
 router.post("/", (req, res, next) => {
-	const link = req.query.link;
-
 	let url;
 
 	try {
+		const link = req.body.link;
 		url = new URL(link);
 	} catch (error) {
 		return next(errors.invalidLink());
