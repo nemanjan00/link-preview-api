@@ -12,6 +12,9 @@
     "lint": "eslint src",
     "start": "forever src"
   },
+  "bin": {
+    "link-preview-api": "./bin/link-preview-api"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "./dev/lint.sh"
