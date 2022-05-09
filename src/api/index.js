@@ -19,6 +19,8 @@ router.use((req, res, next) => {
 	next();
 });
 
+router.use("/preview_link", require("./previewLink"));
+
 router.use((_req, _res, next) => {
 	return next(errors.notFound());
 });
@@ -28,9 +30,10 @@ router.use((err, _req, res, next) => {
 		return next(err)
 	}
 
-	console.log(err);
 
 	if(!err.status) {
+		console.error(err);
+
 		err = errors.unknownError();
 	}
 

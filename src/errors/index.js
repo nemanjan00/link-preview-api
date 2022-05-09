@@ -29,5 +29,21 @@ module.exports = {
 			type: "NotFound",
 			message: "Not found"
 		};
+	},
+
+	invalidLink: () => {
+		return {
+			status: 400,
+			type: "InvalidLink",
+			message: "Invalid link"
+		};
+	},
+
+	errorFetchingLink: () => {
+		return {
+			status: 500,
+			type: "ErrorFetchingLink",
+			message: "Error fetching link"
+		};
 	}
 };
