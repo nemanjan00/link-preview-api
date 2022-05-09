@@ -1,5 +1,7 @@
 # link-preview-api
 
+Link preview API based on ospfranco/link-preview-js 
+
 ## Table of contents
 
 <!-- vim-markdown-toc GFM -->
