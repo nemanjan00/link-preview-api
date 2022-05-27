@@ -11,7 +11,14 @@ router.post("/", (req, res, next) => {
 
 	try {
 		const link = req.body.link;
-		url = new URL(link);
+
+		let validLink = link;
+
+		if(link.indexOf("http") != 0) {
+			validLink = "http://" + link;
+		}
+
+		url = new URL(validLink);
 	} catch (error) {
 		return next(errors.invalidLink());
 	}
